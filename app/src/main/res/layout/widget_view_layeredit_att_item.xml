@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:orientation="horizontal"
+   >
+
+    <TextView
+        android:id="@+id/fld_name"
+        android:text="字段名"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_width="100dp"
+
+        android:layout_marginLeft="10dp"
+        android:layout_height="match_parent" />
+    <EditText
+        android:layout_gravity="center_vertical"
+        android:id="@+id/fld_val"
+        android:text="字段值"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:textColor="#2c2c2c"
+        android:layout_height="match_parent" />
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/camera"
+        android:layout_margin="5dp"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/camera"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/voice"
+        android:layout_margin="5dp"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/voice"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/video"
+        android:layout_margin="5dp"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/video"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+
+</LinearLayout>

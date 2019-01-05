@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+
+    android:layout_height="match_parent">
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <Spinner
+                android:id="@+id/layer_type"
+                android:layout_gravity="center_vertical"
+
+                android:spinnerMode="dropdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></Spinner>
+
+
+            <EditText
+                android:hint="请输入图层名称"
+                android:id="@+id/new_layer_name"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_margin="5dp"
+            android:background="@color/grey" />
+        <ListView
+            android:id="@+id/flds_list"
+            android:divider="@null"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"></ListView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <Spinner
+                android:id="@+id/sp_fld_type"
+                android:layout_gravity="center_vertical"
+                android:spinnerMode="dropdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></Spinner>
+            <EditText
+                android:id="@+id/new_fld_name"
+               android:hint="字段名"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/add_fld"
+                android:layout_gravity="center_vertical"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="#00ffffff"
+                android:scaleType="centerCrop"
+                android:src="@drawable/add" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_margin="5dp"
+            android:background="@color/grey" />
+    </LinearLayout>
+</ScrollView>
+
+
+
+</LinearLayout>

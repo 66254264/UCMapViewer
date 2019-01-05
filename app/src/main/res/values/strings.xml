@@ -1,0 +1,42 @@
+<resources>
+
+    <string name="app_name">UCMapViewer</string>
+    <string name="app_title_name_mian">通用应用程序框架</string>
+    <string name="app_title_name_subhead">基于UCMap地图通用开发框架</string>
+    <string name="app_company">Copyright © xxxxxx</string>
+
+    <!--解锁信息-->
+    <string name="loginRemark">请输入解锁密码</string>
+    <string name="permission">权限(permission)</string>
+    <string name="no_permissions">应用需要必要的运行权限</string>
+
+    <!--权限配置-->
+    <string name="settings">设置</string>
+    <string name="help">帮助</string>
+    <string name="string_help_text">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。\n\n最后点击两次后退按钮，即可返回。</string>
+    <string name="quit">退出</string>
+
+    <!--地图窗口-->
+    <string name="txt_location_info">当前gps信息经度 133.67 纬度 32.56 高程 33.4 误差 12m</string>
+
+
+    <!--自定义锁屏-->
+
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+
+    <!-- Accessibility description sent when user starts drawing a lock pattern. [CHAR LIMIT=NONE] -->
+    <string name="lockscreen_access_pattern_start">Pattern started</string>
+    <!-- Accessibility description sent when the pattern times out and is cleared. [CHAR LIMIT=NONE] -->
+    <string name="lockscreen_access_pattern_cleared">Pattern cleared</string>
+    <!-- Accessibility description sent when user adds a cell to the pattern. [CHAR LIMIT=NONE] -->
+    <string name="lockscreen_access_pattern_cell_added">Cell added</string>
+    <!-- Accessibility description sent when user completes drawing a pattern. [CHAR LIMIT=NONE] -->
+    <string name="lockscreen_access_pattern_detected">Pattern completed</string>
+
+
+</resources>

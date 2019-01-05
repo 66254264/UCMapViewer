@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+
+    android:background="#fff"
+
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="14sp"
+        android:id="@+id/layer_name"
+        android:text="图层名称"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <com.node.ucmapviewer.Modules.AutoFillListView
+        android:layout_marginTop="2dp"
+        android:id="@+id/fld_list"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.node.ucmapviewer.Modules.AutoFillListView>
+</LinearLayout>

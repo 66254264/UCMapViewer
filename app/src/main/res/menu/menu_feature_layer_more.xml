@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_feature_line_width"
+        android:title="线宽"/>
+    <item
+        android:id="@+id/menu_feature_line_color"
+        android:title="线颜色"/>
+</menu>

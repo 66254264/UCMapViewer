@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <com.node.ucmapviewer.FrameWork.MapModule.Map.MapView
+            android:id="@+id/activity_map_mapview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true">
+        </com.node.ucmapviewer.FrameWork.MapModule.Map.MapView>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+
+            android:alpha="0.9">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+
+
+                    android:id="@+id/activity_map_mapview_locationInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正在搜索GPS..."
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/activity_map_compass"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+
+            android:layout_marginTop="10dp"
+            android:clickable="true">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <Button
+                android:id="@+id/maptoolbar_toggle_open"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:alpha="0.85"
+                android:background="@drawable/ic_widget_closed_btn" />
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/map_tool_bar"
+            android:orientation="vertical"
+            android:background="#fff"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="2dp"
+            android:layout_width="40dp"
+
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/maptoolbar_toggle_close"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_horizontal"
+                android:alpha="0.85"
+                android:background="@drawable/ic_widget_open_btn" />
+
+            <ScrollView
+                android:scrollbars="none"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/toolbar_zoom_in"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="2dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/zoom_in" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="放大"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/toolbar_zoom_out"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/zoom_out" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="缩小"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:id="@+id/toolbar_full_extent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/full_extent" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="全图"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/toolbar_get_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/get_area" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="面积"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/toolbar_get_length"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/get_length" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="距离"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/toolbar_gps_pos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/get_gps" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="定位"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/toolbar_clear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/clear" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="清除"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+
+        <include
+            layout="@layout/base_widget_view_tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <include
+            layout="@layout/base_widget_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

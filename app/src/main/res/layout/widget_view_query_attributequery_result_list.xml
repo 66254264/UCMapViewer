@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+
+    android:background="#fff"
+
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="14sp"
+        android:id="@+id/layer_name"
+        android:text="图层名称"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+
+        android:layout_marginTop="4dp"
+        android:id="@+id/fld_list"
+        android:lineSpacingMultiplier = "2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+
+    <LinearLayout
+        android:id="@+id/medias"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/media"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:gravity="center_vertical"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="多媒体附件"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+
+    <!--<com.node.ucmapviewer.Modules.AutoFillListView-->
+        <!--android:layout_marginTop="2dp"-->
+        <!--android:id="@+id/fld_list"-->
+        <!--android:divider="@null"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"></com.node.ucmapviewer.Modules.AutoFillListView>-->
+</LinearLayout>

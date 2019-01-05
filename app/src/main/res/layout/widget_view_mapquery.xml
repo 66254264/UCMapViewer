@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tap_query_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/ic_item_touch_txtred"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="地图点击"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/tap_query_btn_bg"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorPrimary" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/search_query_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_item_touch_txtred"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="属性查图"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/search_query_btn_bg"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorPrimary"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--点击查询-->
+        <LinearLayout
+            android:id="@+id/tap_query"
+            android:visibility="visible"
+            android:orientation="vertical"
+
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/widget_view_query_mapquery_linerBtnFeatureSelect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@mipmap/select_feature" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="说明：轻触屏幕以拾取要素。" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_margin="2dp"
+                android:background="@color/grey"></View>
+            <GridView
+                android:background="#f1efef"
+                android:numColumns="1"
+                android:verticalSpacing="5dp"
+                android:horizontalSpacing="5dp"
+                android:id="@+id/single_feature_att_list"
+                android:divider="@null"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" android:layout_weight="1">
+
+            </GridView>
+
+        </LinearLayout>
+
+        <!--属性查询-->
+        <LinearLayout
+            android:id="@+id/search_query"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <Spinner
+                            android:id="@+id/query_layer_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <EditText
+                            android:id="@+id/search_key"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_weight="1"
+                            android:hint="请输入查询关键字"
+                            android:inputType="text"
+                            android:padding="5dp"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/start_search"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+
+                            android:background="@drawable/ic_touch_btn"
+                            android:text="查询"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="@color/light_gray">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/search_result_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="查询结果"
+                        android:textStyle="normal|bold" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/grey" />
+
+                    <com.node.ucmapviewer.Modules.AutoFillGridView
+                        android:background="#f1efef"
+                        android:numColumns="1"
+                        android:verticalSpacing="5dp"
+                        android:horizontalSpacing="5dp"
+                        android:id="@+id/search_query_resultListview"
+                        android:divider="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp" android:layout_weight="1">
+
+                    </com.node.ucmapviewer.Modules.AutoFillGridView>
+
+
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

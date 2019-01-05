@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left"
+    android:padding="1dp"
+    android:paddingRight="5dp"
+    android:singleLine="true"
+    android:text="Hello World"
+    android:textColor="#7f7e7e"
+    android:textSize="15sp" />

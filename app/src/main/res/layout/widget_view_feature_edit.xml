@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+       >
+
+
+
+        <Spinner
+
+            android:id="@+id/edit_layers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/new_layer"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/ic_touch_btn"
+            android:text="新建"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/point_tool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/light_gray"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="点要素工具"
+                            android:textStyle="normal|bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/grey" />
+
+                    <HorizontalScrollView
+
+                        android:scrollbars="none"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/add_point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+
+                                android:background="@drawable/ic_item_touch"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    app:srcCompat="@drawable/add" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="bottom"
+                                    android:text="添加点"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+
+
+
+
+
+                            <LinearLayout
+
+                                android:id="@+id/move_point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+
+                                android:background="@drawable/ic_item_touch"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="5dp"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    app:srcCompat="@drawable/move" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="bottom"
+                                    android:text="移动点"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/delete_point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+
+                                android:background="@drawable/ic_item_touch"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    app:srcCompat="@drawable/delete_feature" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="bottom"
+                                    android:text="删除点"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/point_att"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+
+                                android:background="@drawable/ic_item_touch"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="5dp"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    app:srcCompat="@drawable/att" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="bottom"
+                                    android:text="点属性"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/line_tool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/light_gray"
+                android:visibility="visible">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="线要素工具"
+                                android:textStyle="normal|bold" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/grey" />
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/add_line"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+
+                                android:background="@drawable/ic_item_touch"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    app:srcCompat="@drawable/add" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="bottom"
+                                    android:text="添加线"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+
+
+
+
+                            <LinearLayout
+
+                                android:id="@+id/edit_line_geomerty"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+
+                                android:background="@drawable/ic_item_touch"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    app:srcCompat="@drawable/add_node" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="bottom"
+                                    android:text="编辑节点"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:id="@+id/delete_line"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+
+                                android:background="@drawable/ic_item_touch"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    app:srcCompat="@drawable/delete_feature" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="bottom"
+                                    android:text="删除线"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+
+                                android:id="@+id/line_att"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+
+                                android:background="@drawable/ic_item_touch"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    app:srcCompat="@drawable/att" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="bottom"
+                                    android:text="线属性"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        </HorizontalScrollView>
+
+                    </LinearLayout>
+
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/polygon_tool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/light_gray"
+                android:visibility="visible">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="面要素工具"
+                                android:textStyle="normal|bold" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/grey" />
+
+                        <HorizontalScrollView
+                            android:scrollbars="none"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <LinearLayout
+
+                                android:id="@+id/add_polygon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+
+                                android:background="@drawable/ic_item_touch"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    app:srcCompat="@drawable/add" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="bottom"
+                                    android:text="添加面"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+
+
+
+
+                            <LinearLayout
+
+                                android:id="@+id/edit_polygon_gepmerty"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+
+                                android:background="@drawable/ic_item_touch"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    app:srcCompat="@drawable/add_node" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="bottom"
+                                    android:text="编辑节点"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+
+                                android:id="@+id/delete_polygon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+
+                                android:background="@drawable/ic_item_touch"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    app:srcCompat="@drawable/delete_feature" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="bottom"
+                                    android:text="删除面"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+
+                                android:id="@+id/polygon_att"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+
+                                android:background="@drawable/ic_item_touch"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    app:srcCompat="@drawable/att" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="bottom"
+                                    android:text="面属性"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+
+                                android:id="@+id/polygon_cut"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+
+                                android:background="@drawable/ic_item_touch"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    app:srcCompat="@drawable/add_node" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="bottom"
+                                    android:text="裁切"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+
+                                android:id="@+id/polygon_merge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+
+                                android:background="@drawable/ic_item_touch"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    app:srcCompat="@drawable/add_node" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="bottom"
+                                    android:text="合并"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                            <LinearLayout
+
+                                android:id="@+id/polygon_dig"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+
+                                android:background="@drawable/ic_item_touch"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    app:srcCompat="@drawable/add_node" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="bottom"
+                                    android:text="挖空"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        </HorizontalScrollView>
+
+                    </LinearLayout>
+
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/common_tool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/light_gray"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/grey" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="通用工具" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/undo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+
+                            android:background="@drawable/ic_item_touch"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                app:srcCompat="@drawable/undo" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="bottom"
+                                android:text="撤销"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/redo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+
+                            android:background="@drawable/ic_item_touch"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                app:srcCompat="@drawable/redo" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="bottom"
+                                android:text="重做"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/save_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_touch_btn"
+        android:text="保存"
+        android:textColor="@color/white" />
+
+
+
+</LinearLayout>

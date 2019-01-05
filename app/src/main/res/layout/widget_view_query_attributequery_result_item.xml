@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+       >
+
+        <LinearLayout
+            android:padding="2dp"
+            android:id="@+id/widget_view_quer_attributequery_result_item_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/white"
+
+            android:orientation="horizontal"
+            >
+
+
+            <TextView
+                android:id="@+id/widget_view_quer_attributequery_result_item_txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+               android:textColor="#505050"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="XXX图层" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

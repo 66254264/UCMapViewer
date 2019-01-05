@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        applicationId "com.node.ucmapviewer"
+        minSdkVersion 24
+        targetSdkVersion 27
+        versionCode 104
+        versionName "v-1.0.4"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//        ndk {
+//            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+//        }
+
+        //Enabling multidex support.
+//        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+
+dependencies {
+    implementation  fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.0'
+    implementation  'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.android.support:design:27.1.0'
+    implementation 'com.github.duanhong169:colorpicker:1.1.5'
+    implementation 'com.natewickstrom.rxactivityresult:rxactivityresult:0.1.0-rc3'
+}

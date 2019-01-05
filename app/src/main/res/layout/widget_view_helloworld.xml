@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:padding="3dp"
+        android:text="在线底图资源"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_margin="3dp"
+        android:background="@color/grey"
+        android:layout_width="match_parent"
+        android:layout_height="2px"></View>
+    <GridView
+        android:id="@+id/base_map_grid"
+        android:numColumns="2"
+        android:verticalSpacing="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></GridView>
+</LinearLayout>

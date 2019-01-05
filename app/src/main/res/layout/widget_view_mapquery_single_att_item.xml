@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:clickable="false"
+   >
+
+    <TextView
+        android:id="@+id/fld_name"
+        android:text="字段名"
+        android:textColor="@color/colorAccent"
+        android:gravity="start"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/fld_val"
+        android:text="字段值"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:textColor="#2c2c2c"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

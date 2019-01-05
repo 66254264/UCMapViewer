@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<!--
+App配置文件
+-->
+<configuration>
+    <!--系统工作空间目录-->
+    <workspace path="/UCMapViewer"/>
+
+    <!--widget组件列表-->
+    <modulecontainer>
+        <module label="底图" classname="com.node.ucmapviewer.Modules.BaseMapModule" icon="basemap.png"/>
+        <module label="图层" classname="com.node.ucmapviewer.Modules.LayerManager.LayerManagerModule"
+	             icon="widget_layermanager.png" select_icon="widget_layermanager_select2.png"/>
+        <module label="查询" classname="com.node.ucmapviewer.Modules.LayerQuery" icon="search.png" select_icon="search.png"/>
+        <module label="编辑" classname="com.node.ucmapviewer.Modules.LayerEdit" icon="featureedit.png" select_icon="featureedit.png"/>
+        <module label="轨迹" classname="com.node.ucmapviewer.Modules.TrajManager" icon="traj.png" select_icon="traj.png"/>
+
+    </modulecontainer>
+</configuration>
